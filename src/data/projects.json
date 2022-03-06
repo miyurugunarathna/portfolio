@@ -29,15 +29,6 @@
     },
     {
         "id": 3,
-        "name": "Online Music Store",
-        "lang": [
-            "JSP",
-            "Java",
-            "MySQL"
-        ]
-    },
-    {
-        "id": 4,
         "name": "MS Club Official Web",
         "lang": [
             "React.js",
@@ -54,7 +45,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 4,
         "name": "Portfolio",
         "lang": [
             "React.js",
@@ -71,7 +62,7 @@
         }
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Itp Guide 3.0 Frontend Demo",
         "lang": [
             "Angular",
