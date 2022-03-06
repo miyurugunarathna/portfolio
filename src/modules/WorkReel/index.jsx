@@ -1,3 +1,5 @@
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCirclePlay, faExternalLinkSquare } from '@fortawesome/free-solid-svg-icons';
@@ -5,15 +7,26 @@ import { projects } from "../../data";
 
 const WorkReel = () => {
 
+    const work = useRef(null);
+    const reel = useRef(null);
+
+    let timeline = gsap.timeline({delay: 0.5});
+
+    useEffect(() => {
+        timeline.from(work.current, {duration: 0.5, ease: "power4.inOut", opacity: 1, y: 100}, 1);
+        timeline.from(reel.current.children, {duration: 1, ease: "power4.in", opacity: 0, y: 100, stagger: {amount: 0.4}}, "+=1");
+        timeline.play();
+    })
+
     return (
         <div id="work">
             <div className="p-8 sm:p-16 pt-24 sm:pt-24 min-h-screen flex flex-col justify-between dark:text-white">
                 <div>
-                    <h1 className="text-6xl sm:text-8xl tracking-tight font-light">
+                    <h1 ref={work} className="text-6xl sm:text-8xl tracking-tight font-light">
                         Work Reel
                     </h1>
                 </div>
-                <div className="mt-5 flex flex-col divide-y divide-slate-300 dark:divide-neutral-900" id="workreel">
+                <div ref={reel} className="mt-5 flex flex-col divide-y divide-slate-300 dark:divide-neutral-900" id="workreel">
                     {projects.map((project) => (
                         <div key={project.id}>
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 py-6">
