@@ -11,7 +11,7 @@ const Landing = () => {
                     <div className="flex flex-col text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[3rem] sm:leading-[4rem] md:leading-[5rem] lg:leading-[6rem] uppercase font-[1000] tracking-wide font-['Cabinet_Grotesk'] dark:text-white">
                         <span>Design</span>
                         <span>Minded</span>
-                        <span>Frontend</span>
+                        <span>Full-Stack</span>
                         <span>Developer</span>
                     </div>
                     <span className="text-lg sm:text-2xl leading-5 sm:ml-1 dark:text-white">
