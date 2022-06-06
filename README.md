@@ -3,6 +3,10 @@
 
 
 
+## ✨Make your own
+
+Use this as a template.
+
 ## ✨Features
 
 - Modern UI
